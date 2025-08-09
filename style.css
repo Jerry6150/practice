@@ -1,0 +1,10 @@
+/* 태그 선택자 */
+p { color: gray; font-size: 18px; }
+
+/* 클래스 선택자 */
+.title { color: blue; }
+.highlight { background: yellow; }
+
+/* 아이디 선택자 */
+#actionBtn { background: pink; border: none; padding: 8px 12px; }
+#actionBtn:hover { background: red; color: white; cursor: pointer; }
