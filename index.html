@@ -1,14 +1,61 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>미니 실습</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Google 클론</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1 class="title">안녕하세요!</h1>
-  <p class="desc">이 문단은 <span class="highlight">CSS 스타일</span>을 적용받습니다.</p>
-  <button id="actionBtn">클릭</button>
+  <header>
+  <nav>
+    <a href="#">Gmail</a>
+    <a href="#">이미지</a>
+    <button class="apps-btn" aria-label="Google 앱 열기">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="#5f6368" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="4.5" cy="4.5" r="2.5"/>
+        <circle cx="12" cy="4.5" r="2.5"/>
+        <circle cx="19.5" cy="4.5" r="2.5"/>
+        <circle cx="4.5" cy="12" r="2.5"/>
+        <circle cx="12" cy="12" r="2.5"/>
+        <circle cx="19.5" cy="12" r="2.5"/>
+        <circle cx="4.5" cy="19.5" r="2.5"/>
+        <circle cx="12" cy="19.5" r="2.5"/>
+        <circle cx="19.5" cy="19.5" r="2.5"/>
+      </svg>
+        <span class="tooltip-text">Google 앱</span>
+    </button>
+    <div class="signin-btn">로그인</div>
+  </nav>
+</header>
+
+
+
+
+  <main>
+    <img
+      src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+      alt="Google"
+      class="logo"
+    />
+    <form class="search-form" action="https://www.google.com/search" method="GET">
+      <input
+        type="text"
+        name="q"
+        class="search-input"
+        placeholder="검색어 입력"
+        autocomplete="off"
+        autofocus
+      />
+      <div class="buttons">
+        <button type="submit">Google 검색</button>
+        <button type="submit" name="btnI">I'm Feeling Lucky</button>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p>대한민국</p>
+  </footer>
 </body>
 </html>

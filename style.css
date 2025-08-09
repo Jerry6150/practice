@@ -1,10 +1,180 @@
-/* 태그 선택자 */
-p { color: gray; font-size: 18px; }
+/* 기본 */
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  color: #202124;
+}
 
-/* 클래스 선택자 */
-.title { color: blue; }
-.highlight { background: yellow; }
+/* 헤더 */
+header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #5f6368;
+}
 
-/* 아이디 선택자 */
-#actionBtn { background: pink; border: none; padding: 8px 12px; }
-#actionBtn:hover { background: red; color: white; cursor: pointer; }
+header nav {
+    display: flex;
+    align-items:center;
+}
+
+header nav a {
+  margin-left: 11px;
+  margin-right:11px;
+  color: #5f6368;
+  text-decoration: none;
+  transition: border-bottom 0.15s ease-in-out;
+  padding-bottom: 2px;
+}
+
+header nav a:hover {
+  border-bottom: 1.5px solid #202124;
+}
+
+header nav button {
+    margin: 11px;
+}
+
+/* 메인 중앙 */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 로고 */
+.logo {
+  width: 272px;
+  height: 92px;
+  margin-bottom: 24px;
+}
+
+/* 검색 폼 */
+.search-form {
+  width: 100%;
+  max-width: 584px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 검색창 */
+.search-input {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 1px solid #dfe1e5;
+  border-radius: 24px;
+  box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+  outline: none;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.search-input:focus {
+  border-color: #4285f4;
+  box-shadow: 0 1px 6px rgb(66 133 244 / 30%);
+}
+
+.apps-btn {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.apps-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* 툴팁 텍스트 숨김 */
+.tooltip-text {
+  visibility: hidden;
+  width: 80px;
+  background-color: #616161;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 4px 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: -75%; /* 버튼 위쪽에 위치 */
+  left: 37%;
+  margin-left: -40px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 12px;
+  pointer-events: none; /* 툴팁이 마우스 이벤트를 받지 않도록 */
+}
+
+/* 툴팁 삼각형 */
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  bottom: 100%; /* 툴팁 하단 */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-color:  transparent transparent #616161 transparent ;
+
+  border-style: solid;
+}
+
+/* 버튼에 호버 시 툴팁 보이기 */
+.apps-btn:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* 버튼 그룹 */
+.buttons {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+}
+
+.buttons button {
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #3c4043;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+  box-shadow: 0 1px 1px rgb(0 0 0 / 0.1);
+}
+
+.buttons button:hover {
+  border-color: #c6c6c6;
+  background-color: #f1f1f1;
+}
+
+/* 푸터 */
+footer {
+  text-align: center;
+  font-size: 14px;
+  padding: 12px 0;
+  color: #70757a;
+  border-top: 1px solid #e4e4e4;
+}
+
+.signin-btn {
+    background-color:cadetblue;
+    color: white;
+    margin-bottom:5px;
+    padding: 6.5px;
+    border-radius: 15px;
+
+}
