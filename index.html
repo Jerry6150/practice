@@ -5,6 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Google 클론</title>
   <link rel="stylesheet" href="style.css" />
+  
+  <script>
+
+    const fucn = (m)=>{
+      const c = document.createElement('div')
+      c.innerText = `${m}`
+      c.setAttribute('style','width:500px; height:50px; padding:10px; margin-top:10px;background-color:skyblue;')
+      return c
+
+    }
+
+    window.onload= ()=>{
+
+      console.log('Hello World!')
+      const a = document.querySelector('.logo')
+      a.src = "https://mblogthumb-phinf.pstatic.net/MjAyMTA2MjhfMjc3/MDAxNjI0ODYyMDMyNTU0.aoNMkTzj08fp34E8p8TN94I_Q4RwKNGAac65kDNmc30g.L0FpWt2i3xUnG97IxYQfOAO0-fpd--aCe38i0OwzMiIg.JPEG.mobilian5155/01.26421392.1.jpg?type=w800"
+      const b = document.querySelector('.signin-btn')
+      window.addEventListener('keydown', (e)=>{
+        if(e.keyCode==13){
+        
+          const q = document.querySelector('main')
+          const n = document.querySelector('.search-input')
+          const k  = fucn(n.value)
+
+        
+        q.appendChild(k)
+        }
+        
+
+
+      })
+
+
+    }
+
+    
+
+    
+
+  </script>
+
 </head>
 <body>
   <header>
@@ -38,7 +79,7 @@
       alt="Google"
       class="logo"
     />
-    <form class="search-form" action="https://www.google.com/search" method="GET">
+    <div class="search-form" >
       <input
         type="text"
         name="q"
@@ -51,7 +92,7 @@
         <button type="submit">Google 검색</button>
         <button type="submit" name="btnI">I'm Feeling Lucky</button>
       </div>
-    </form>
+    </div>
   </main>
 
   <footer>
